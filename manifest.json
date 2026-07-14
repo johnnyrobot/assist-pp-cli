@@ -1,0 +1,29 @@
+{
+  "manifest_version": "0.3",
+  "name": "assist-pp-mcp",
+  "display_name": "ASSIST",
+  "version": "0.1.0",
+  "description": "Anonymous access to the public ASSIST articulation and transferability endpoints.",
+  "author": {
+    "name": "CLI Printing Press"
+  },
+  "license": "Apache-2.0",
+  "server": {
+    "type": "binary",
+    "entry_point": "bin/assist-pp-mcp",
+    "mcp_config": {
+      "command": "${__dirname}/bin/assist-pp-mcp",
+      "args": [],
+      "env": {}
+    }
+  },
+  "user_config": {},
+  "compatibility": {
+    "claude_desktop": ">=1.0.0",
+    "platforms": [
+      "darwin",
+      "linux",
+      "win32"
+    ]
+  }
+}

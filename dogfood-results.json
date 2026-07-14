@@ -1,0 +1,29 @@
+{
+  "dir": "<cli-dir>/assist",
+  "spec_path": "<cli-dir>/spec.yaml",
+  "spec_source": "bundled-public-web-app",
+  "verdict": "PASS",
+  "path_check": {
+    "tested": 10,
+    "valid": 10,
+    "valid_pct": 100,
+    "detail": "All exposed endpoint families returned valid anonymous JSON from assist.org on 2026-07-13."
+  },
+  "auth_check": {
+    "spec_scheme": "none",
+    "generated_format": "anonymous XSRF bootstrap",
+    "match": true,
+    "detail": "No API key is accepted or sent; the client handles the public site-issued X-XSRF-TOKEN in memory."
+  },
+  "browser_session_check": {
+    "required": true,
+    "pass": true,
+    "detail": "Anonymous landing-page cookie bootstrap verified."
+  },
+  "mcp_surface_parity": {
+    "state": "runtime_walking",
+    "pass": true,
+    "detail": "Licensed-only tools are absent; public typed tools and command mirrors are present."
+  },
+  "issues": null
+}

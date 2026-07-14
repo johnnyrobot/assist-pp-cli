@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "id": "assist-public-endpoints",
+  "applied_at": "2026-07-13",
+  "base_run_id": "20260713-160620-f9bb0c43",
+  "base_printing_press_version": "4.28.0",
+  "summary": "Use assist.org's anonymous public web endpoints and remove every API-key requirement from the CLI and MCP surface.",
+  "reason": "The intended integration is the public ASSIST website contract, not the separately licensed prod.assistng.org API. The public site requires an anonymous XSRF bootstrap but no user credential.",
+  "files": [
+    "spec.yaml",
+    "internal/client/client.go",
+    "internal/config/config.go",
+    "internal/cli/root.go",
+    "internal/cli/public_endpoints.go",
+    "internal/cli/agreements_list.go",
+    "internal/cli/agreements_get.go",
+    "internal/cli/agreements_institutions.go",
+    "internal/cli/advisor_agreements.go",
+    "internal/cli/assist_resolution.go",
+    "internal/cli/doctor.go",
+    "internal/cli/agent_context.go",
+    "manifest.json",
+    "README.md",
+    "SKILL.md"
+  ],
+  "validated_outcome": "Full Go suite passes; ten live public route shapes return anonymous JSON; agreement list and advisor workflow return 70 reports for the verified pair/year; MCP list contains only public typed endpoints and current command mirrors."
+}

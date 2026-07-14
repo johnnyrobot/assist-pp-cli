@@ -1,0 +1,11 @@
+# ASSIST's public website endpoints require no secrets.
+schema_version = 2
+name = "assist-pp-cli"
+display_name = "ASSIST"
+description = "Anonymous public ASSIST articulation and transferability endpoints."
+project_kind = "cli"
+
+[sync]
+default = false
+
+[sync.keys]

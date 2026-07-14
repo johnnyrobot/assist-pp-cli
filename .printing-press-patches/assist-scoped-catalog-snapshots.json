@@ -1,0 +1,18 @@
+{
+  "schema_version": 2,
+  "id": "assist-scoped-catalog-snapshots",
+  "applied_at": "2026-07-13",
+  "base_run_id": "20260713-160620-f9bb0c43",
+  "base_printing_press_version": "4.28.0",
+  "summary": "Preserve institution/year catalog partitions across sync, local reads, reconciliation, and cross-year diffs.",
+  "reason": "ASSIST catalog endpoints are path-scoped and reuse record IDs across academic years; generic unscoped storage silently overwrote or mixed snapshots.",
+  "files": [
+    "internal/cli/assist_sync_scope.go",
+    "internal/cli/assist_scoped_read.go",
+    "internal/cli/sync.go",
+    "internal/cli/catalog_diff.go",
+    "internal/store/assist_catalog.go",
+    "internal/store/store.go"
+  ],
+  "validated_outcome": "Scoped sync/local-read/reconcile/migration tests pass; same-spec generate --force preserved all hooks and go test ./... passed."
+}

@@ -1,0 +1,15 @@
+{
+  "schema_version": 2,
+  "id": "assist-mcp-array-query-contract",
+  "applied_at": "2026-07-13",
+  "base_run_id": "20260713-160620-f9bb0c43",
+  "base_printing_press_version": "4.28.0",
+  "summary": "Accept ASSIST's top-level course-ID array in MCP and mark every POST search endpoint read-only.",
+  "reason": "The generated polymorphic body fallback accepted objects only even though the official courses-by-IDs endpoint requires an integer array.",
+  "files": [
+    "internal/mcp/tools.go",
+    "internal/mcp/cobratree/typemap.go",
+    "internal/cli/catalog_diff.go"
+  ],
+  "validated_outcome": "MCP handler test proves the exact array POST body; context and required-flag schema regressions pass."
+}

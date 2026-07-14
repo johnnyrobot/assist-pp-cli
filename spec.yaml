@@ -1,0 +1,119 @@
+name: assist
+display_name: ASSIST
+description: Public California higher-education transfer and articulation data from assist.org.
+cli_description: Anonymous access to ASSIST's public articulation and transferability endpoints.
+version: "0.2.0"
+base_url: https://assist.org
+website_url: https://assist.org
+category: education
+regions: [US]
+api_language: en
+health_check_path: /api/AcademicYears
+spec_source: public-web-app
+
+auth:
+  type: none
+
+config:
+  format: toml
+  path: ~/.config/assist-pp-cli/config.toml
+
+cache:
+  enabled: true
+  stale_after: 168h
+  refresh_timeout: 30s
+
+resources:
+  settings:
+    description: Public application settings and version limits.
+    endpoints:
+      get:
+        method: GET
+        path: /api/appsettings
+        response: {type: object, item: AppSettings}
+
+  academic-years:
+    description: Public ASSIST academic years and IDs.
+    endpoints:
+      list:
+        method: GET
+        path: /api/AcademicYears
+        response: {type: array, item: AcademicYear}
+        id_field: id
+
+  institutions:
+    description: Public institutions, names, codes, categories, and term types.
+    endpoints:
+      list:
+        method: GET
+        path: /api/institutions
+        response: {type: array, item: Institution}
+        id_field: id
+      agreements:
+        method: GET
+        path: /api/institutions/{institutionId}/agreements
+        params:
+          - {name: institutionId, type: int, required: true, positional: true}
+          - {name: asSendingOnly, type: bool, default: true}
+        response: {type: array, item: InstitutionAgreement}
+
+  agreements:
+    description: Public articulation agreement discovery and reports.
+    endpoints:
+      categories:
+        method: GET
+        path: /api/agreements/categories
+        params: &agreement_params
+          - {name: receivingInstitutionId, type: int, required: true}
+          - {name: sendingInstitutionId, type: int, required: true}
+          - {name: academicYearId, type: int, required: true}
+        response: {type: array, item: AgreementCategory}
+      list:
+        method: GET
+        path: /api/agreements
+        params:
+          - {name: receivingInstitutionId, type: int, required: true}
+          - {name: sendingInstitutionId, type: int, required: true}
+          - {name: academicYearId, type: int, required: true}
+          - {name: categoryCode, type: string, required: true}
+        response: {type: object, item: AgreementReports}
+      get:
+        method: GET
+        path: /api/articulation/Agreements
+        params:
+          - {name: Key, flag_name: key, type: string, required: true}
+        response: {type: object, item: Agreement}
+        response_path: result
+
+  transferability:
+    description: Public institution transferability lists and course data.
+    endpoints:
+      years:
+        method: GET
+        path: /api/institutions/{institutionId}/transferability/availableAcademicYears
+        params:
+          - {name: institutionId, type: int, required: true, positional: true}
+        response: {type: object, item: TransferabilityYears}
+      categories:
+        method: GET
+        path: /api/transferability/categories
+        params: &transferability_params
+          - {name: institutionId, type: int, required: true}
+          - {name: academicYearId, type: int, required: true}
+          - {name: listType, type: string, required: true}
+        response: {type: array, item: TransferabilityCategory}
+      courses:
+        method: GET
+        path: /api/transferability/courses
+        params: *transferability_params
+        response: {type: object, item: TransferabilityCourses}
+
+  artifacts:
+    description: Public rendered agreement artifacts.
+    endpoints:
+      get:
+        method: GET
+        path: /api/artifacts/{key}
+        params:
+          - {name: key, type: string, required: true, positional: true}
+        response: {type: binary, item: PDF}

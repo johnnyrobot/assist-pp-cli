@@ -1,0 +1,18 @@
+{
+  "schema_version": 2,
+  "id": "assist-official-payload-semantics",
+  "applied_at": "2026-07-13",
+  "base_run_id": "20260713-160620-f9bb0c43",
+  "base_printing_press_version": "4.28.0",
+  "summary": "Decode string-encoded agreement JSON, use official term fields and stable parent IDs, and report truthful agent provenance.",
+  "reason": "Official ASSIST payloads encode nested agreement sections as strings and version departments/prefixes with rotating IDs, which defeated structural comparisons and cross-year identity.",
+  "files": [
+    "internal/cli/agreements_diff.go",
+    "internal/cli/advisor_course.go",
+    "internal/cli/catalog_diff.go",
+    "internal/cli/novel_output.go",
+    "spec.yaml",
+    "internal/types/types.go"
+  ],
+  "validated_outcome": "Official-shape fixtures prove nested JSON Pointer diffs, beginTermId forwarding, stable parent identity, and live/local agent metadata."
+}

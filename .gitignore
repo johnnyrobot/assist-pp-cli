@@ -1,0 +1,26 @@
+# Compiled binaries and release bundles
+/assist
+/assist-pp-cli
+/assist-pp-mcp
+/bin/
+/build/
+*.mcpb
+
+# Printing Press run archives contain local absolute paths and superseded research.
+/.manuscripts/
+/.printing-press-pii-polish.json
+
+# Local runtime state
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+credentials.toml
+config.toml
+.agentcookie-managed
+
+# Editor and operating-system noise
+.DS_Store
+*.swp
+*.tmp

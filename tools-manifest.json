@@ -1,0 +1,24 @@
+{
+  "api_name": "assist",
+  "base_url": "https://assist.org",
+  "description": "Anonymous public ASSIST articulation and transferability endpoints.",
+  "mcp_ready": "full",
+  "http_transport": "standard-cookie-jar",
+  "auth": {
+    "type": "none",
+    "env_vars": []
+  },
+  "required_headers": ["X-XSRF-TOKEN (anonymous site-issued token, handled automatically)"],
+  "tools": [
+    {"name":"settings_get","method":"GET","path":"/api/appsettings"},
+    {"name":"academic-years_list","method":"GET","path":"/api/AcademicYears"},
+    {"name":"institutions_list","method":"GET","path":"/api/institutions"},
+    {"name":"agreements_institutions","method":"GET","path":"/api/institutions/{institutionId}/agreements"},
+    {"name":"agreements_categories","method":"GET","path":"/api/agreements/categories"},
+    {"name":"agreements_list","method":"GET","path":"/api/agreements"},
+    {"name":"agreements_get","method":"GET","path":"/api/articulation/Agreements"},
+    {"name":"transferability_years","method":"GET","path":"/api/institutions/{institutionId}/transferability/availableAcademicYears"},
+    {"name":"transferability_categories","method":"GET","path":"/api/transferability/categories"},
+    {"name":"transferability_courses","method":"GET","path":"/api/transferability/courses"}
+  ]
+}
