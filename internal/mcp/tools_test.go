@@ -221,8 +221,8 @@ func TestMCPSearchEmptyStoreReturnsActionableEnvelope(t *testing.T) {
 	if envelope.Resumable {
 		t.Fatalf("empty-store envelope should not claim cursor support: %s", text)
 	}
-	if !strings.Contains(envelope.NextStep, "sync") {
-		t.Fatalf("empty-store next_step should mention sync: %s", text)
+	if !strings.Contains(envelope.NextStep, "workflow archive") {
+		t.Fatalf("empty-store next_step should name the archive command: %s", text)
 	}
 }
 
@@ -296,8 +296,8 @@ func TestMCPSQLEmptyStoreReturnsActionableEnvelope(t *testing.T) {
 	if envelope.Resumable {
 		t.Fatalf("empty-store SQL envelope should not claim cursor support: %s", text)
 	}
-	if !strings.Contains(envelope.NextStep, "sync") {
-		t.Fatalf("empty-store SQL next_step should mention sync: %s", text)
+	if !strings.Contains(envelope.NextStep, "workflow archive") {
+		t.Fatalf("empty-store SQL next_step should name the archive command: %s", text)
 	}
 }
 

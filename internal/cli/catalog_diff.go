@@ -108,7 +108,7 @@ agreements diff to compare two complete published agreement payloads.`,
 			}
 			if _, err := os.Stat(dbPath); err != nil {
 				if os.IsNotExist(err) {
-					fmt.Fprintf(cmd.ErrOrStderr(), "hint: local mirror not found at %s. Run 'assist-pp-cli sync' for both catalog years first.\n", dbPath)
+					fmt.Fprintf(cmd.ErrOrStderr(), "hint: local mirror not found at %s. Run 'assist-pp-cli workflow archive' for both catalog years first.\n", dbPath)
 					return notFoundErr(fmt.Errorf("local catalog mirror not found"))
 				}
 				return fmt.Errorf("checking local database: %w", err)
