@@ -6,13 +6,53 @@ No API key, account, or licensed API access is required. The client starts an an
 
 ## Install
 
+`assist-pp-cli` is all you need. The separate `assist-pp-mcp` server is only for chat apps that can't run shell commands.
+
+### Go install
+
+Requires Go 1.26.5 or newer:
+
 ```bash
+go install github.com/johnnyrobot/assist-pp-cli/cmd/assist-pp-cli@latest
+```
+
+To also install the MCP server binary:
+
+```bash
+go install github.com/johnnyrobot/assist-pp-cli/cmd/assist-pp-mcp@latest
+```
+
+Both install into `$GOPATH/bin` (default `$HOME/go/bin`) — make sure that directory is on `$PATH`.
+
+### Pre-built binary
+
+Download a binary for your platform from the [latest release](https://github.com/johnnyrobot/assist-pp-cli/releases/latest).
+
+On macOS, clear the Gatekeeper quarantine after downloading:
+
+```bash
+xattr -d com.apple.quarantine assist-pp-cli
+```
+
+On Unix, mark it executable:
+
+```bash
+chmod +x assist-pp-cli
+```
+
+### From source
+
+```bash
+git clone https://github.com/johnnyrobot/assist-pp-cli.git
+cd assist-pp-cli
 mkdir -p "$HOME/.local/bin"
 go build -trimpath -o "$HOME/.local/bin/assist-pp-cli" ./cmd/assist-pp-cli
 go build -trimpath -o "$HOME/.local/bin/assist-pp-mcp" ./cmd/assist-pp-mcp
 ```
 
-An MCP host needs only the binary path—there are no credential environment variables:
+### Use with Claude Desktop
+
+An MCP host needs only the binary path — there are no credential environment variables:
 
 ```json
 {

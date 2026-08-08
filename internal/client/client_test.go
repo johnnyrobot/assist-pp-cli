@@ -16,7 +16,7 @@ import (
 	"time"
 	"unicode/utf8"
 
-	"assist-pp-cli/internal/config"
+	"github.com/johnnyrobot/assist-pp-cli/internal/config"
 )
 
 func TestTruncateBody(t *testing.T) {

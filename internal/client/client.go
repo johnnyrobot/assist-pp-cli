@@ -4,8 +4,8 @@
 package client
 
 import (
-	"assist-pp-cli/internal/cliutil"
-	"assist-pp-cli/internal/config"
+	"github.com/johnnyrobot/assist-pp-cli/internal/cliutil"
+	"github.com/johnnyrobot/assist-pp-cli/internal/config"
 	"bytes"
 	"context"
 	"crypto/sha256"

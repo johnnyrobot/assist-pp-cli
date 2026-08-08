@@ -13,10 +13,10 @@ import (
 	"sync"
 	"testing"
 
-	"assist-pp-cli/internal/cliutil"
-	"assist-pp-cli/internal/learn"
-	"assist-pp-cli/internal/learn/entities"
-	"assist-pp-cli/internal/store"
+	"github.com/johnnyrobot/assist-pp-cli/internal/cliutil"
+	"github.com/johnnyrobot/assist-pp-cli/internal/learn"
+	"github.com/johnnyrobot/assist-pp-cli/internal/learn/entities"
+	"github.com/johnnyrobot/assist-pp-cli/internal/store"
 )
 
 func unmarshalAgentResults(t *testing.T, stdout string, out any) {

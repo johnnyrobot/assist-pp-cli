@@ -24,9 +24,9 @@ import (
 	"regexp"
 	"sync"
 
-	"assist-pp-cli/internal/learn/entities"
-	"assist-pp-cli/internal/learn/lookups"
-	"assist-pp-cli/internal/store"
+	"github.com/johnnyrobot/assist-pp-cli/internal/learn/entities"
+	"github.com/johnnyrobot/assist-pp-cli/internal/learn/lookups"
+	"github.com/johnnyrobot/assist-pp-cli/internal/store"
 )
 
 // newLearnConfig returns the per-CLI entity extractor Config the

@@ -27,12 +27,12 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"assist-pp-cli/internal/cliutil"
-	"assist-pp-cli/internal/learn"
-	"assist-pp-cli/internal/learn/entities"
-	"assist-pp-cli/internal/learn/lookups"
-	"assist-pp-cli/internal/learn/patterns"
-	"assist-pp-cli/internal/store"
+	"github.com/johnnyrobot/assist-pp-cli/internal/cliutil"
+	"github.com/johnnyrobot/assist-pp-cli/internal/learn"
+	"github.com/johnnyrobot/assist-pp-cli/internal/learn/entities"
+	"github.com/johnnyrobot/assist-pp-cli/internal/learn/lookups"
+	"github.com/johnnyrobot/assist-pp-cli/internal/learn/patterns"
+	"github.com/johnnyrobot/assist-pp-cli/internal/store"
 )
 
 // noLearnEnvVar is the environment variable that disables the learning

@@ -1,4 +1,4 @@
-module assist-pp-cli
+module github.com/johnnyrobot/assist-pp-cli
 
 go 1.26.5
 

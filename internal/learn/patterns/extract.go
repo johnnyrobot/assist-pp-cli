@@ -10,7 +10,7 @@ import (
 	"sort"
 	"strings"
 
-	"assist-pp-cli/internal/learn/lookups"
+	"github.com/johnnyrobot/assist-pp-cli/internal/learn/lookups"
 )
 
 // extractWindow caps how many of the most-recently-observed

@@ -13,7 +13,7 @@ import (
 	"strings"
 	"time"
 
-	"assist-pp-cli/internal/cliutil"
+	"github.com/johnnyrobot/assist-pp-cli/internal/cliutil"
 )
 
 // teachLogStateDirName is the per-user state directory name.

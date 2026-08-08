@@ -14,7 +14,7 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"assist-pp-cli/internal/store"
+	"github.com/johnnyrobot/assist-pp-cli/internal/store"
 )
 
 // learnStatsEnvelope locks the JSON contract for `learnings stats`.

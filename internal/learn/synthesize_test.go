@@ -20,8 +20,8 @@ import (
 	"strings"
 	"testing"
 
-	"assist-pp-cli/internal/learn"
-	"assist-pp-cli/internal/store"
+	"github.com/johnnyrobot/assist-pp-cli/internal/learn"
+	"github.com/johnnyrobot/assist-pp-cli/internal/store"
 )
 
 // synthesisFamily is the query family every scenario teaches under.

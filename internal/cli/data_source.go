@@ -17,8 +17,8 @@ import (
 	"strings"
 	"time"
 
-	"assist-pp-cli/internal/client"
-	"assist-pp-cli/internal/store"
+	"github.com/johnnyrobot/assist-pp-cli/internal/client"
+	"github.com/johnnyrobot/assist-pp-cli/internal/store"
 )
 
 const networkFallbackReason = "api_unreachable"

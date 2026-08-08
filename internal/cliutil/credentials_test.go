@@ -12,8 +12,8 @@ import (
 	"sync"
 	"testing"
 
-	"assist-pp-cli/internal/cliutil"
-	"assist-pp-cli/internal/config"
+	"github.com/johnnyrobot/assist-pp-cli/internal/cliutil"
+	"github.com/johnnyrobot/assist-pp-cli/internal/config"
 )
 
 func resetCredentialEnv(t *testing.T) (home, configPath string) {

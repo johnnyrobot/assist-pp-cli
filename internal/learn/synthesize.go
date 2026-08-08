@@ -10,7 +10,7 @@ import (
 	"sort"
 	"strings"
 
-	"assist-pp-cli/internal/store"
+	"github.com/johnnyrobot/assist-pp-cli/internal/store"
 )
 
 // Teach-time playbook synthesis. When an agent teaches a resource

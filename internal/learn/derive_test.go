@@ -17,8 +17,8 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"assist-pp-cli/internal/learn"
-	"assist-pp-cli/internal/store"
+	"github.com/johnnyrobot/assist-pp-cli/internal/learn"
+	"github.com/johnnyrobot/assist-pp-cli/internal/store"
 )
 
 // deriveDBPath allocates a fresh candidate-store path per test.

@@ -12,7 +12,7 @@ import (
 
 	_ "modernc.org/sqlite"
 
-	"assist-pp-cli/internal/learn/entities"
+	"github.com/johnnyrobot/assist-pp-cli/internal/learn/entities"
 )
 
 // stubResolver is a test-only EntityResolver backed by an in-memory

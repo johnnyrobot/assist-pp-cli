@@ -13,9 +13,9 @@ import (
 	"strings"
 	"testing"
 
-	"assist-pp-cli/internal/cliutil"
-	"assist-pp-cli/internal/mcp/bound"
-	"assist-pp-cli/internal/store"
+	"github.com/johnnyrobot/assist-pp-cli/internal/cliutil"
+	"github.com/johnnyrobot/assist-pp-cli/internal/mcp/bound"
+	"github.com/johnnyrobot/assist-pp-cli/internal/store"
 	mcplib "github.com/mark3labs/mcp-go/mcp"
 	"github.com/mark3labs/mcp-go/server"
 )
