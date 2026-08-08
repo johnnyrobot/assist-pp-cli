@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"strings"
 
-	"assist-pp-cli/internal/store"
+	"github.com/johnnyrobot/assist-pp-cli/internal/store"
 	"github.com/spf13/cobra"
 )
 

@@ -8,7 +8,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"assist-pp-cli/internal/store"
+	"github.com/johnnyrobot/assist-pp-cli/internal/store"
 )
 
 func openLearnings(t *testing.T) *store.Store {

@@ -12,7 +12,7 @@ import (
 	"strings"
 	"unicode"
 
-	"assist-pp-cli/internal/cliutil"
+	"github.com/johnnyrobot/assist-pp-cli/internal/cliutil"
 )
 
 // LookupRow is the canonical seed-row shape used by both the seeds

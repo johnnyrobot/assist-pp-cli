@@ -8,8 +8,8 @@ import (
 	"os"
 	"sort"
 
-	"assist-pp-cli/internal/cliutil"
-	"assist-pp-cli/internal/learn"
+	"github.com/johnnyrobot/assist-pp-cli/internal/cliutil"
+	"github.com/johnnyrobot/assist-pp-cli/internal/learn"
 	"github.com/spf13/cobra"
 	"github.com/spf13/pflag"
 )

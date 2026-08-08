@@ -12,7 +12,7 @@ import (
 	"strings"
 	"time"
 
-	"assist-pp-cli/internal/learn/lookups"
+	"github.com/johnnyrobot/assist-pp-cli/internal/learn/lookups"
 )
 
 // DefaultJaccardMin matches the recall-side floor. Applying the same

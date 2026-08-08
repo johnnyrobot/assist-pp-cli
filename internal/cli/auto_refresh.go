@@ -11,8 +11,8 @@ import (
 	"strings"
 	"time"
 
-	"assist-pp-cli/internal/cliutil"
-	"assist-pp-cli/internal/store"
+	"github.com/johnnyrobot/assist-pp-cli/internal/cliutil"
+	"github.com/johnnyrobot/assist-pp-cli/internal/store"
 )
 
 // assistScopedAutoRefreshPolicy anchors the deliberate exclusion of scoped

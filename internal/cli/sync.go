@@ -4,11 +4,11 @@
 package cli
 
 import (
-	"assist-pp-cli/internal/client"
-	"assist-pp-cli/internal/cliutil"
-	"assist-pp-cli/internal/learn"
-	"assist-pp-cli/internal/learn/lookups"
-	"assist-pp-cli/internal/store"
+	"github.com/johnnyrobot/assist-pp-cli/internal/client"
+	"github.com/johnnyrobot/assist-pp-cli/internal/cliutil"
+	"github.com/johnnyrobot/assist-pp-cli/internal/learn"
+	"github.com/johnnyrobot/assist-pp-cli/internal/learn/lookups"
+	"github.com/johnnyrobot/assist-pp-cli/internal/store"
 	"context"
 	"database/sql"
 	"encoding/json"

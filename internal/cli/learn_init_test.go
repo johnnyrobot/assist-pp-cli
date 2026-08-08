@@ -8,8 +8,8 @@ import (
 	"path/filepath"
 	"testing"
 
-	"assist-pp-cli/internal/learn"
-	"assist-pp-cli/internal/store"
+	"github.com/johnnyrobot/assist-pp-cli/internal/learn"
+	"github.com/johnnyrobot/assist-pp-cli/internal/store"
 )
 
 // TestNewLearnConfig_BuildsConfig pins that the emitted init shim

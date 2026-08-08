@@ -4,8 +4,8 @@
 package cli
 
 import (
-	"assist-pp-cli/internal/client"
-	"assist-pp-cli/internal/cliutil"
+	"github.com/johnnyrobot/assist-pp-cli/internal/client"
+	"github.com/johnnyrobot/assist-pp-cli/internal/cliutil"
 	"bytes"
 	"context"
 	"encoding/json"

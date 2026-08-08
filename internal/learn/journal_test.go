@@ -17,9 +17,9 @@ import (
 	"testing"
 	"time"
 
-	"assist-pp-cli/internal/cli"
-	"assist-pp-cli/internal/cliutil"
-	"assist-pp-cli/internal/learn"
+	"github.com/johnnyrobot/assist-pp-cli/internal/cli"
+	"github.com/johnnyrobot/assist-pp-cli/internal/cliutil"
+	"github.com/johnnyrobot/assist-pp-cli/internal/learn"
 )
 
 // withJournalHome isolates a test in a temp HOME with every journal

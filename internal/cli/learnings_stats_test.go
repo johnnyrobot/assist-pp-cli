@@ -9,7 +9,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"assist-pp-cli/internal/store"
+	"github.com/johnnyrobot/assist-pp-cli/internal/store"
 )
 
 // runLearningsStatsJSON executes `learnings stats --json` against the

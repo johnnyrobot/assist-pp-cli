@@ -10,7 +10,7 @@ import (
 	"strings"
 	"time"
 
-	"assist-pp-cli/internal/cliutil"
+	"github.com/johnnyrobot/assist-pp-cli/internal/cliutil"
 	"github.com/pelletier/go-toml/v2"
 )
 

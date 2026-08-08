@@ -13,7 +13,7 @@ import (
 	"strings"
 	"time"
 
-	"assist-pp-cli/internal/store"
+	"github.com/johnnyrobot/assist-pp-cli/internal/store"
 )
 
 // This file owns post-run flag-correction derivation: turning an

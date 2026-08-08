@@ -15,9 +15,9 @@ import (
 	"strings"
 	"time"
 
-	"assist-pp-cli/internal/learn/entities"
-	"assist-pp-cli/internal/learn/lookups"
-	"assist-pp-cli/internal/learn/patterns"
+	"github.com/johnnyrobot/assist-pp-cli/internal/learn/entities"
+	"github.com/johnnyrobot/assist-pp-cli/internal/learn/lookups"
+	"github.com/johnnyrobot/assist-pp-cli/internal/learn/patterns"
 )
 
 // Default thresholds. Keep in sync with the documented contract in

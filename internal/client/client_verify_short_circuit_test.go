@@ -12,7 +12,7 @@ import (
 	"testing"
 	"time"
 
-	"assist-pp-cli/internal/config"
+	"github.com/johnnyrobot/assist-pp-cli/internal/config"
 )
 
 // recordingRoundTripper counts how many times its RoundTrip method is

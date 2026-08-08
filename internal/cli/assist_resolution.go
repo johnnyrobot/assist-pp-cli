@@ -11,7 +11,7 @@ import (
 	"strings"
 	"unicode"
 
-	"assist-pp-cli/internal/client"
+	"github.com/johnnyrobot/assist-pp-cli/internal/client"
 )
 
 // assistResolutionData is a single live snapshot of ASSIST's two reference

@@ -18,9 +18,9 @@ import (
 	"testing"
 	"testing/fstest"
 
-	"assist-pp-cli/internal/cli/playbooks"
-	"assist-pp-cli/internal/learn"
-	"assist-pp-cli/internal/store"
+	"github.com/johnnyrobot/assist-pp-cli/internal/cli/playbooks"
+	"github.com/johnnyrobot/assist-pp-cli/internal/learn"
+	"github.com/johnnyrobot/assist-pp-cli/internal/store"
 )
 
 // twoPlaybookFS returns an fstest.MapFS with two minimal playbooks +

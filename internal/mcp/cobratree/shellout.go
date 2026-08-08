@@ -12,7 +12,7 @@ import (
 	"strconv"
 	"strings"
 
-	"assist-pp-cli/internal/mcp/bound"
+	"github.com/johnnyrobot/assist-pp-cli/internal/mcp/bound"
 	mcplib "github.com/mark3labs/mcp-go/mcp"
 	"github.com/mark3labs/mcp-go/server"
 )

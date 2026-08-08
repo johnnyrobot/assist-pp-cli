@@ -13,11 +13,11 @@ import (
 	"text/tabwriter"
 	"time"
 
-	"assist-pp-cli/internal/client"
-	"assist-pp-cli/internal/cliutil"
-	"assist-pp-cli/internal/config"
-	"assist-pp-cli/internal/learn"
-	"assist-pp-cli/internal/store"
+	"github.com/johnnyrobot/assist-pp-cli/internal/client"
+	"github.com/johnnyrobot/assist-pp-cli/internal/cliutil"
+	"github.com/johnnyrobot/assist-pp-cli/internal/config"
+	"github.com/johnnyrobot/assist-pp-cli/internal/learn"
+	"github.com/johnnyrobot/assist-pp-cli/internal/store"
 	"github.com/spf13/cobra"
 	"github.com/spf13/pflag"
 )

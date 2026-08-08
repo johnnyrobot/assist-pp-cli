@@ -17,7 +17,7 @@ import (
 	"sync"
 	"time"
 
-	"assist-pp-cli/internal/cliutil"
+	"github.com/johnnyrobot/assist-pp-cli/internal/cliutil"
 )
 
 // The invocation journal records one entry per CLI invocation in dated

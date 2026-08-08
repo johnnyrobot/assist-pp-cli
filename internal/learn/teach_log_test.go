@@ -11,7 +11,7 @@ import (
 	"sync"
 	"testing"
 
-	"assist-pp-cli/internal/cliutil"
+	"github.com/johnnyrobot/assist-pp-cli/internal/cliutil"
 )
 
 func withTempHomeForLog(t *testing.T) string {

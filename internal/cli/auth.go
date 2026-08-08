@@ -11,8 +11,8 @@ import (
 	"runtime"
 	"strings"
 
-	"assist-pp-cli/internal/cliutil"
-	"assist-pp-cli/internal/config"
+	"github.com/johnnyrobot/assist-pp-cli/internal/cliutil"
+	"github.com/johnnyrobot/assist-pp-cli/internal/config"
 	"github.com/spf13/cobra"
 )
 

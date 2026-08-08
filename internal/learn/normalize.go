@@ -7,7 +7,7 @@ import (
 	"sort"
 	"strings"
 
-	"assist-pp-cli/internal/learn/entities"
+	"github.com/johnnyrobot/assist-pp-cli/internal/learn/entities"
 )
 
 // NormalizedQuery is the entity-aware normalized representation of a

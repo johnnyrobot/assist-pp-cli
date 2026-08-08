@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"strings"
 
-	"assist-pp-cli/internal/learn/entities"
+	"github.com/johnnyrobot/assist-pp-cli/internal/learn/entities"
 )
 
 // EntityMatch classifies how well a stored learning's resource-side

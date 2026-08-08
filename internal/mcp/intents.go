@@ -20,8 +20,8 @@ import (
 	"fmt"
 	"strings"
 
-	"assist-pp-cli/internal/mcp/bound"
-	"assist-pp-cli/internal/mcp/cobratree"
+	"github.com/johnnyrobot/assist-pp-cli/internal/mcp/bound"
+	"github.com/johnnyrobot/assist-pp-cli/internal/mcp/cobratree"
 	mcplib "github.com/mark3labs/mcp-go/mcp"
 	"github.com/mark3labs/mcp-go/server"
 )
