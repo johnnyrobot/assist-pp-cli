@@ -138,7 +138,7 @@ In local mode: searches locally synced data only.`,
 
 			db, err := store.OpenWithContext(cmd.Context(), dbPath)
 			if err != nil {
-				return fmt.Errorf("opening local database: %w\nRun 'assist-pp-cli sync' first to populate the local database.", err)
+				return fmt.Errorf("opening local database: %w\nRun 'assist-pp-cli workflow archive' first to populate the local database.", err)
 			}
 			defer db.Close()
 

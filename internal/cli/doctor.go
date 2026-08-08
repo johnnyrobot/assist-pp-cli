@@ -542,7 +542,7 @@ func collectCacheReport(ctx context.Context, staleAfterSpec string) map[string]a
 	if err != nil {
 		if os.IsNotExist(err) {
 			report["status"] = "unknown"
-			report["hint"] = "Database not created yet; run 'assist-pp-cli sync' to hydrate."
+			report["hint"] = "Database not created yet; run 'assist-pp-cli workflow archive' to hydrate."
 			return report
 		}
 		report["status"] = "error"
@@ -575,7 +575,7 @@ func collectCacheReport(ctx context.Context, staleAfterSpec string) map[string]a
 		// sync_state may not exist on a fresh DB that has migrated but not
 		// yet had any sync runs — treat as unknown rather than error.
 		report["status"] = "unknown"
-		report["hint"] = "No sync state recorded; run 'assist-pp-cli sync' to populate."
+		report["hint"] = "No sync state recorded; run 'assist-pp-cli workflow archive' to populate."
 		return report
 	}
 	defer rows.Close()
@@ -615,13 +615,13 @@ func collectCacheReport(ctx context.Context, staleAfterSpec string) map[string]a
 	switch {
 	case !haveAny && len(resources) == 0:
 		report["status"] = "empty"
-		report["hint"] = "Cache is empty; run 'assist-pp-cli sync' to hydrate."
+		report["hint"] = "Cache is empty; run 'assist-pp-cli workflow archive' to hydrate."
 	case fresh:
 		report["status"] = "fresh"
 	default:
 		report["status"] = "stale"
 		report["oldest_age"] = oldest.Round(time.Minute).String()
-		report["hint"] = "Some resources are older than stale_after; run 'assist-pp-cli sync' to refresh."
+		report["hint"] = "Some resources are older than stale_after; run 'assist-pp-cli workflow archive' to refresh."
 	}
 	return report
 }
