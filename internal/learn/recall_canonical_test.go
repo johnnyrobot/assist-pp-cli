@@ -8,7 +8,7 @@
 // seeded entity_lookups table records all three as values under the
 // canonical "Alpha-Widget-Canonical". The literal-alias path covers
 // same-alias queries; this file locks in the canonical-resolution path
-// plus the Greptile-flagged guards that keep same-entity / no-lookup
+// plus the review-flagged guards that keep same-entity / no-lookup
 // rows from being silently admitted via the looser cross-alias floor.
 
 package learn
@@ -417,7 +417,7 @@ func TestRecall_AmbiguousAlias_MultiEntityDistinctCanonicalsDoesNotFire(t *testi
 }
 
 // TestRecall_SameEntity_NoCanonicalLookup_DropsBelowJMin guards the
-// Greptile finding on PR #851 round 3: when both query and stored row
+// Review finding on PR #851 round 3: when both query and stored row
 // share a literal entity but entity_lookups has no canonical row for it,
 // queryCanonicals and storedCanonicals are both empty. Without an
 // explicit guard, case 2 of the cross-alias fallback would admit such
@@ -452,7 +452,7 @@ func TestRecall_SameEntity_NoCanonicalLookup_DropsBelowJMin(t *testing.T) {
 }
 
 // TestRecall_SameEntity_CanonicalJaccardDoesNotInflateScore guards the
-// second Greptile finding on PR #851: case 1 of the fallback switch
+// second review finding on PR #851: case 1 of the fallback switch
 // (canonicalOverlap branch) used to boost the score via canonicalJaccard
 // for any row whose canonicals overlapped the query -- including
 // same-literal-entity rows where the boost is trivially 1.0. A
@@ -487,7 +487,7 @@ func TestRecall_SameEntity_CanonicalJaccardDoesNotInflateScore(t *testing.T) {
 }
 
 // TestRecall_CaseInsensitiveEntitySlicesIntersect_HelperUnit guards the
-// third Greptile finding: stored entities preserve extractor casing
+// third review finding: stored entities preserve extractor casing
 // (e.g. "Alpha") but other call sites (PromoteEntities walks lowercased
 // query_pattern tokens; the opportunistic backfill in the row loop
 // uses lowercased forms) can land lowercased entities on the query

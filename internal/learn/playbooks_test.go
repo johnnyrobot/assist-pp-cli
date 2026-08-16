@@ -269,7 +269,7 @@ func TestResolveSlots_NilResolver(t *testing.T) {
 	}
 }
 
-// TestResolveSlots_OnlyConsidersEntities guards the Greptile finding
+// TestResolveSlots_OnlyConsidersEntities guards the review finding
 // on PR #851 round 3: ResolveSlots used to include non-entity tokens
 // in the candidate pool. If a token classified as non-entity happens
 // to resolve via entity_lookups (a secondary-alias collision the

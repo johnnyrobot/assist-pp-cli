@@ -72,7 +72,7 @@ func openMissingTableDB(t *testing.T) (*sql.DB, func()) {
 	return db, fix
 }
 
-// TestCanonicalResolver_ScanError verifies the Greptile-found
+// TestCanonicalResolver_ScanError verifies the review-found
 // cache-poison guard. A failure during row iteration (here simulated
 // via a cancelled context that errors before any row materializes)
 // must NOT cache the truncated result. A subsequent Resolve call on

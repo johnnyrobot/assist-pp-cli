@@ -420,7 +420,7 @@ func TestPlaybookInit_AmendMarkerSpecificity(t *testing.T) {
 }
 
 // TestPlaybookInit_SkipsPlaybookWithoutExamples pins the edge case from
-// Greptile round 2: a JSON with no query_family_examples is unreachable
+// Review round 2: a JSON with no query_family_examples is unreachable
 // at recall time, so the install path refuses to seed it and emits a
 // stderr warning. The sentinel still writes because the skip is
 // graceful (policy skips don't fail the install).

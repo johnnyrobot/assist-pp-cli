@@ -343,7 +343,7 @@ func TestAppendPlaybookNotes_ConcurrentNoLoss(t *testing.T) {
 	t.Parallel()
 	s := openTestPlaybooksStore(t)
 	// Seed an empty-notes row so we exercise the UPDATE branch under
-	// concurrent appends — the bug Greptile flagged is that two amends
+	// concurrent appends — the bug code review flagged is that two amends
 	// can interleave outside the transaction and overwrite each other.
 	if _, _, err := s.UpsertPlaybook(UpsertPlaybookInput{
 		QueryFamily:  "concurrent family",
